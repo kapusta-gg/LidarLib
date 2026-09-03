@@ -86,8 +86,6 @@ CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o: \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
  /usr/include/c++/13/tr1/riemann_zeta.tcc \
  /home/wander/projects/lidar/include/lidar_structs.h \
- /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h \
- /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_driver.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
  /usr/include/c++/13/bits/new_allocator.h /usr/include/c++/13/new \
@@ -110,6 +108,8 @@ CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
+ /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h \
+ /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_driver.h \
  /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/node_handle.h \

@@ -181,4 +181,21 @@ CMakeFiles/lidar_app.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/basic_string.tcc \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
- /usr/include/c++/13/bits/uses_allocator_args.h
+ /usr/include/c++/13/bits/uses_allocator_args.h \
+ /usr/include/c++/13/optional \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /home/wander/projects/lidar/include/lidar_structs.h \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc \
+ /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h \
+ /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_driver.h \
+ /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h \
+ /usr/include/c++/13/bits/erase_if.h \
+ /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_cmd.h \
+ /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_protocol.h \
+ /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_types.h \
+ /usr/include/c++/13/cstdint

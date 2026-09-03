@@ -27,7 +27,7 @@ int main()
     if(!status) return 1;
 
     while(!ctrl_c_pressed){
-        manager.get_data();
+        auto data = manager.scan_data();
     } 
 
     printf("\nStopping programm...\n");

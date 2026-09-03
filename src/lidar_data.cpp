@@ -4,8 +4,10 @@
 #include <math.h>
 #include <chrono>
 #include <thread>
+#include <optional>
 
 #include "lidar_data.h"
+#include "lidar_structs.h"
 #include "sl_lidar.h" 
 #include "sl_lidar_driver.h"
 
@@ -90,12 +92,13 @@ bool LidarManager::start_scan(){
     return true;
 } 
 
-void LidarManager::get_data(){
+std::optional<LidarData> LidarManager::scan_data(){
     if(!helper->drv->isConnected()) {
         printf("No driver connection!\n");
-        return;
+        return std::nullopt;
     }
 
+    LidarData data = {};
     double angle, dist;
     double x, y;
 
@@ -111,15 +114,16 @@ void LidarManager::get_data(){
     if (!SL_IS_OK(res) &&
         res != SL_RESULT_OPERATION_TIMEOUT) {
         printf("Timeout...");
-        return;
+        return std::nullopt;
     }
 
     if (SL_IS_OK(res)) {
+
         helper->drv->ascendScanData(helper->nodes, helper->count);
         for (int i = 0; i < int(helper->count); ++i) {
-            angle = ((helper->nodes[i].angle_z_q14 * 90.f) / 16384.f) * (M_PI / 180.f);
-            dist = helper->nodes[i].dist_mm_q2 / 4.0f;
-            x = dist * cos(angle); y = dist * sin(angle);
+            angle = this->get_angle(helper->nodes[i]);
+            dist = this->get_dist(helper->nodes[i]);
+            data.add_node(angle, dist);
            // printf("x: %03.2f y: %03.2f angle: %03.2f dist: %03.2f \n", x, y, angle, dist);
         }
     }
@@ -127,5 +131,5 @@ void LidarManager::get_data(){
         printf("grabScanDataHq error: 0x%08X\n", res);
     }
     printf("Data grab finished successfully\n");
+    return data;
 }
-
