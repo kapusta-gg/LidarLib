@@ -3,6 +3,7 @@
 
 CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o: /home/wander/projects/lidar/src/lidar_data.cpp \
   /home/wander/projects/lidar/include/lidar_data.h \
+  /home/wander/projects/lidar/include/lidar_structs.h \
   /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h \
   /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_cmd.h \
   /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_driver.h \
@@ -29,6 +30,7 @@ CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o: /home/wander/projects/lidar/src/l
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
@@ -109,6 +111,7 @@ CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o: /home/wander/projects/lidar/src/l
   /usr/include/c++/13/math.h \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/optional \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
@@ -427,6 +430,13 @@ CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o: /home/wander/projects/lidar/sr
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/lidar_app.dir/src/main.cpp.o: /home/wander/projects/lidar/src/main.cpp \
+  /usr/include/stdc-predef.h
+
+CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/window.cpp \
+  /home/wander/projects/lidar/imgui/backends/imgui_impl_glfw.h \
+  /home/wander/projects/lidar/imgui/backends/imgui_impl_opengl3.h \
+  /home/wander/projects/lidar/imgui/imconfig.h \
+  /home/wander/projects/lidar/imgui/imgui.h \
   /home/wander/projects/lidar/include/lidar_data.h \
   /home/wander/projects/lidar/include/lidar_structs.h \
   /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h \
@@ -434,9 +444,14 @@ CMakeFiles/lidar_app.dir/src/main.cpp.o: /home/wander/projects/lidar/src/main.cp
   /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_driver.h \
   /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_protocol.h \
   /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_types.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glext.h \
+  /usr/include/GLFW/glfw3.h \
+  /usr/include/KHR/khrplatform.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/assert.h \
   /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
@@ -660,128 +675,11 @@ CMakeFiles/lidar_app.dir/src/main.cpp.o: /home/wander/projects/lidar/src/main.cp
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
-
-CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/window.cpp \
-  /home/wander/projects/lidar/imgui/backends/imgui_impl_glfw.h \
-  /home/wander/projects/lidar/imgui/backends/imgui_impl_opengl3.h \
-  /home/wander/projects/lidar/imgui/imconfig.h \
-  /home/wander/projects/lidar/imgui/imgui.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glext.h \
-  /usr/include/GLFW/glfw3.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/alloca.h \
-  /usr/include/assert.h \
-  /usr/include/c++/13/bits/std_abs.h \
-  /usr/include/c++/13/cstdlib \
-  /usr/include/c++/13/pstl/pstl_config.h \
-  /usr/include/c++/13/stdlib.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/signal.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdint.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
-
-/usr/include/assert.h:
-
-/usr/include/GL/glext.h:
-
-/home/wander/projects/lidar/imgui/imgui.h:
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
@@ -805,11 +703,15 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
-/usr/include/c++/13/tr1/riemann_zeta.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/c++/13/tr1/legendre_function.tcc:
 
@@ -833,6 +735,8 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
 
+/usr/include/c++/13/bits/exception_ptr.h:
+
 /usr/include/c++/13/bits/refwrap.h:
 
 /usr/include/c++/13/thread:
@@ -849,13 +753,15 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/c++/13/ctime:
 
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/home/wander/projects/lidar/imgui/imconfig.h:
+
 /usr/include/c++/13/cstdlib:
 
 /usr/include/c++/13/cstdint:
 
 /usr/include/c++/13/cstdio:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
 /usr/include/c++/13/cmath:
 
@@ -866,6 +772,10 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 /usr/include/c++/13/cerrno:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/usr/include/c++/13/optional:
+
+/usr/include/c++/13/bits/vector.tcc:
 
 /usr/include/c++/13/stdlib.h:
 
@@ -878,6 +788,8 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 /usr/include/c++/13/bits/atomic_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/home/wander/projects/lidar/imgui/imgui.h:
 
 /usr/include/c++/13/pstl/glue_memory_defs.h:
 
@@ -927,21 +839,27 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/c++/13/tr1/ell_integral.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
 /usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/c++/13/bits/stl_construct.h:
 
+/usr/include/c++/13/bits/stl_bvector.h:
+
+/usr/include/c++/13/bits/allocator.h:
+
+/usr/include/c++/13/bits/stl_algobase.h:
+
+/usr/include/c++/13/bits/cxxabi_forced.h:
+
 /usr/include/c++/13/cstddef:
+
+/usr/include/GL/glext.h:
 
 /usr/include/c++/13/bits/erase_if.h:
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/13/bits/cxxabi_forced.h:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
@@ -972,20 +890,6 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/c++/13/bits/localefwd.h:
-
-/usr/include/GLFW/glfw3.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/c++/13/bits/vector.tcc:
-
-/usr/include/c++/13/optional:
-
-/usr/include/c++/13/bits/allocator.h:
-
-/usr/include/c++/13/bits/stl_bvector.h:
 
 /usr/include/c++/13/bits/stringfwd.h:
 
@@ -1037,9 +941,9 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/home/wander/projects/lidar/src/window.cpp:
+/usr/include/c++/13/bits/enable_special_members.h:
 
-/home/wander/projects/lidar/include/lidar_data.h:
+/home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h:
 
 /usr/include/c++/13/ext/aligned_buffer.h:
 
@@ -1069,8 +973,6 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/c++/13/backward/auto_ptr.h:
 
-/home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h:
-
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/13/typeinfo:
@@ -1080,8 +982,6 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/c++/13/tr1/poly_hermite.tcc:
 
 /usr/include/c++/13/bits/this_thread_sleep.h:
 
@@ -1113,8 +1013,6 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/c++/13/bits/invoke.h:
 
-/usr/include/c++/13/bits/stl_algobase.h:
-
 /usr/include/c++/13/bits/ostream_insert.h:
 
 /usr/include/c++/13/math.h:
@@ -1127,11 +1025,19 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+/home/wander/projects/lidar/include/lidar_structs.h:
+
 /usr/include/c++/13/tr1/bessel_function.tcc:
 
 /usr/include/c++/13/initializer_list:
 
 /usr/include/c++/13/bits/std_thread.h:
+
+/usr/include/c++/13/tr1/poly_hermite.tcc:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
@@ -1143,9 +1049,9 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/c++/13/tuple:
 
-/home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_protocol.h:
-
 /usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_protocol.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
@@ -1182,8 +1088,6 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -1223,9 +1127,9 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/usr/include/time.h:
-
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
@@ -1307,9 +1211,9 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
-/home/wander/projects/lidar/imgui/backends/imgui_impl_opengl3.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/home/wander/projects/lidar/imgui/backends/imgui_impl_opengl3.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -1329,18 +1233,18 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/windo
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
-/home/wander/projects/lidar/include/lidar_structs.h:
+/home/wander/projects/lidar/include/lidar_data.h:
 
-/usr/include/c++/13/bits/enable_special_members.h:
+/home/wander/projects/lidar/src/window.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/GLFW/glfw3.h:
+
+/usr/include/assert.h:
 
 /usr/include/linux/close_range.h:
 
 /home/wander/projects/lidar/src/lidar_structs.cpp:
 
 /usr/include/string.h:
-
-/home/wander/projects/lidar/imgui/imconfig.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:

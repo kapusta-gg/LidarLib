@@ -6,7 +6,9 @@
 struct LidarNode
 {
     float x;
-    float y; 
+    float y;
+    float dist;
+    float angle; 
     LidarNode(float angle, float dist);
 };
 
@@ -17,6 +19,7 @@ struct LidarData
 
     public:
         void add_node(float angle, float dist);
+        std::vector<LidarNode> get_nodes();
         LidarData();
 };
 
