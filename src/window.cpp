@@ -7,7 +7,7 @@
 #include <csignal>
 
 #include <GLFW/glfw3.h>
-#include <lidar_data.h>
+#include <lidar_manager.h>
 #include <lidar_structs.h>
 
 #include "imgui.h"
@@ -95,7 +95,10 @@ int main()
         ImDrawList* draw_list = ImGui::GetBackgroundDrawList();
 
         auto data = manager.scan_data();
-        for (LidarNode elem: data->get_nodes()){
+
+        if(!data) continue;
+        
+        for (const LidarNode& elem: data->get_nodes()){
             draw_list->AddLine(
                 ImVec2(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2),
                 ImVec2(WINDOW_WIDTH / 2 + (int)elem.x, WINDOW_HEIGHT / 2 + (int)elem.y),

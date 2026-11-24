@@ -22,7 +22,7 @@ void LidarData::add_node(float angle, float dist){
 }
 
 
-std::vector<LidarNode> LidarData::get_nodes(){
+const std::vector<LidarNode>& LidarData::get_nodes() const{
     return this->list;
 }
 LidarData::LidarData(){};

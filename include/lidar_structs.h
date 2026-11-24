@@ -19,7 +19,7 @@ struct LidarData
 
     public:
         void add_node(float angle, float dist);
-        std::vector<LidarNode> get_nodes();
+        const std::vector<LidarNode>& get_nodes() const;
         LidarData();
 };
 
