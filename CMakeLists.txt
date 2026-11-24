@@ -70,6 +70,7 @@ add_library(
     LidarLib
     src/lidar_manager.cpp
     src/lidar_structs.cpp
+    src/lidar_reader.cpp
 )
 
 target_include_directories(

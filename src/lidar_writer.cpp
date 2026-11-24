@@ -8,7 +8,7 @@
 
 
 LidarWriter::LidarWriter(LidarManager& manager) : manager(manager) {this->filename = "lidar_data.cpp"; this->sep = ';';}
-LidarWriter::LidarWriter(LidarManager& manager, char sep) : manager(manager), sep(sep) {this->filename = "lidar_data.cpp";}
+LidarWriter::LidarWriter(LidarManager& manager, char sep) : manager(manager), sep(sep) {this->filename = "lidar_data.csv";}
 LidarWriter::LidarWriter(LidarManager& manager, const std::string filename) : manager(manager), filename(filename) {this->sep = ';';}
 LidarWriter::LidarWriter(LidarManager& manager, const std::string filename, char sep) : manager(manager), filename(filename), sep(sep) {}
 
@@ -22,6 +22,10 @@ bool LidarWriter::write_csv()
     }
 
     std::ofstream file(this->filename, std::ios::app);
+
+    if (!file.is_open()) {
+        return false;
+    }
 
     auto timestamp = data->get_timestamp();
 
@@ -44,5 +48,6 @@ bool LidarWriter::write_csv_header(){
         << "x" << sep
         << "y" << sep
         << "angle" << sep
-        << "dist" << std::endl; 
+        << "dist" << std::endl;
+    return true;
 }

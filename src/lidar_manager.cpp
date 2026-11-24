@@ -114,6 +114,7 @@ std::optional<LidarData> LidarManager::scan_data(){
             "Partial scan received: %zu nodes\n",
             helper->count
         );
+        return std::nullopt;
     }
 
     if (!SL_IS_OK(res) &&
