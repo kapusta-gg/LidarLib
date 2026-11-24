@@ -94,7 +94,14 @@ std::optional<LidarData> LidarManager::scan_data(){
         return std::nullopt;
     }
 
-    LidarData data = {};
+    auto now = std::chrono::system_clock::now();
+
+    auto timestamp_ms =
+        std::chrono::duration_cast<std::chrono::milliseconds>(
+            now.time_since_epoch()
+        ).count();
+
+    LidarData data = {timestamp_ms};
     double angle, dist;
     double x, y;
 
@@ -114,9 +121,7 @@ std::optional<LidarData> LidarManager::scan_data(){
         printf("Timeout...");
         return std::nullopt;
     }
-
     if (SL_IS_OK(res)) {
-
         helper->drv->ascendScanData(helper->nodes, helper->count);
         for (int i = 0; i < int(helper->count); ++i) {
             angle = this->get_angle(helper->nodes[i]);

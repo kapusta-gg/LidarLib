@@ -19,4 +19,8 @@ void LidarData::add_node(float angle, float dist){
 const std::vector<LidarNode>& LidarData::get_nodes() const{
     return this->list;
 }
-LidarData::LidarData(){};
+long long LidarData::get_timestamp() const
+{
+    return this->timestamp_ms;
+}
+LidarData::LidarData(long long timestamp_ms) : timestamp_ms(timestamp_ms){};
