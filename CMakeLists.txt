@@ -71,6 +71,7 @@ add_library(
     src/lidar_manager.cpp
     src/lidar_structs.cpp
     src/lidar_reader.cpp
+    src/lidar_writer.cpp
 )
 
 target_include_directories(

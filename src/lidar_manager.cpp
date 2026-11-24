@@ -103,7 +103,7 @@ std::optional<LidarData> LidarManager::scan_data(){
 
     LidarData data = {timestamp_ms};
     double angle, dist;
-    double x, y;
+    double x, y; // заготовка для преобразования систем координат
 
     helper->count = _countof(helper->nodes);
 
