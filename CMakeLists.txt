@@ -29,13 +29,26 @@ target_include_directories(imgui_lib PUBLIC
 
 set(SOURCES
     src/main.cpp
-    src/lidar_data.cpp
+    src/lidar_manager.cpp
+    src/lidar_reader.cpp
+    src/lidar_writer.cpp
     src/window.cpp
     src/lidar_structs.cpp)
+
+add_library(LidarLib
+    src/lidar_manager.cpp
+    src/lidar_structs.cpp
+)
+
+add_executable(lidar_app
+    src/main.cpp
+    src/window.cpp
+)
 
 add_executable(lidar_app ${SOURCES})
 
 target_link_libraries(lidar_app PRIVATE 
+LidarLib
 lidar_sdk
 ${OPENGL_LIBRARIES}
 glfw

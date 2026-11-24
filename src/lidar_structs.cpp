@@ -2,12 +2,6 @@
 
 #include <lidar_structs.h>
 
-#include "sl_lidar.h" 
-#include "sl_lidar_driver.h"
-
-#ifndef _countof
-#define _countof(_Array) (int)(sizeof(_Array) / sizeof(_Array[0]))
-#endif
 
 LidarNode::LidarNode(float angle, float dist){
         this->angle = angle;
