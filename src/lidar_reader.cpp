@@ -100,37 +100,10 @@ std::optional<LidarData> LidarReader::read_scan()
 
 std::vector<LidarData> LidarReader::read_scans()
 {
-    auto rows = get_lines();
     std::vector<LidarData> scans;
 
-    if (rows.empty()) {
-        return scans;
-    }
-
-    for (const auto& row : rows) {
-
-        // Пропускаем заголовок
-        if (!row.empty() && row[0] == "timestamp") {
-            continue;
-        }
-
-        if (row.size() != 5) {
-            throw std::runtime_error("Invalid CSV row");
-        }
-
-        long long timestamp = std::stoll(row[0]);
-
-        // Создаём новый скан при изменении timestamp
-        if (scans.empty() ||
-            scans.back().get_timestamp() != timestamp) {
-
-            scans.emplace_back(timestamp);
-        }
-
-        float angle = std::stof(row[3]);
-        float dist = std::stof(row[4]);
-
-        scans.back().add_node(angle, dist);
+    while (auto scan = read_scan()) {
+        scans.push_back(*scan);
     }
 
     return scans;
