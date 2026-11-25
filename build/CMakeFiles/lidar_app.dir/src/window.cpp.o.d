@@ -92,7 +92,7 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h \
- /home/wander/projects/lidar/include/lidar_data.h \
+ /home/wander/projects/lidar/include/lidar_manager.h \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/c++/13/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
@@ -188,7 +188,10 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: \
  /home/wander/projects/lidar/include/lidar_structs.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/chrono \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/limits \
+ /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
  /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar.h \
  /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_driver.h \
  /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
@@ -199,8 +202,9 @@ CMakeFiles/lidar_app.dir/src/window.cpp.o: \
  /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_cmd.h \
  /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_lidar_protocol.h \
  /home/wander/projects/lidar/rplidar_sdk/sdk/include/sl_types.h \
- /usr/include/c++/13/cstdint \
  /home/wander/projects/lidar/include/lidar_structs.h \
+ /home/wander/projects/lidar/include/lidar_writer.h \
+ /home/wander/projects/lidar/include/lidar_manager.h \
  /home/wander/projects/lidar/imgui/imgui.h \
  /home/wander/projects/lidar/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h /usr/include/assert.h \

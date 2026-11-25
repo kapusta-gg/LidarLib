@@ -8,8 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/wander/projects/lidar/src/lidar_data.cpp" "CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o" "gcc" "CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o.d"
-  "/home/wander/projects/lidar/src/lidar_structs.cpp" "CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o" "gcc" "CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o.d"
   "/home/wander/projects/lidar/src/main.cpp" "CMakeFiles/lidar_app.dir/src/main.cpp.o" "gcc" "CMakeFiles/lidar_app.dir/src/main.cpp.o.d"
   "/home/wander/projects/lidar/src/window.cpp" "CMakeFiles/lidar_app.dir/src/window.cpp.o" "gcc" "CMakeFiles/lidar_app.dir/src/window.cpp.o.d"
   )

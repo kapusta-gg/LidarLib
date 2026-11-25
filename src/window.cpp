@@ -9,6 +9,7 @@
 #include <GLFW/glfw3.h>
 #include <lidar_manager.h>
 #include <lidar_structs.h>
+#include <lidar_writer.h>
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -54,78 +55,82 @@ int main()
 
     if(!status) return 1;
 
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
+    LidarWriter write(manager);
+    write.write_csv_header();
+    write.write_csv();
 
-    glfwSetErrorCallback(error_callback);
-    if (!glfwInit()){
-        printf("GLFW Initialization fail\n");
-        return 1;
-    }
-    printf("GLFW Initialization succese\n");
+    // IMGUI_CHECKVERSION();
+    // ImGui::CreateContext();
+    // ImGuiIO& io = ImGui::GetIO();
+    // io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     
+    // io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
 
-    GLFWwindow* window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Test", NULL, NULL);
-    if(!window){
-        printf("Window creation failed");
-        return 1;
-    }
-    printf("Window creation succese\n");
+    // glfwSetErrorCallback(error_callback);
+    // if (!glfwInit()){
+    //     printf("GLFW Initialization fail\n");
+    //     return 1;
+    // }
+    // printf("GLFW Initialization succese\n");
 
-    glfwSetWindowTitle(window, "lidar app");
-    glfwSetKeyCallback(window, key_callback);
-    glfwMakeContextCurrent(window);
+    // GLFWwindow* window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Test", NULL, NULL);
+    // if(!window){
+    //     printf("Window creation failed");
+    //     return 1;
+    // }
+    // printf("Window creation succese\n");
 
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init();
+    // glfwSetWindowTitle(window, "lidar app");
+    // glfwSetKeyCallback(window, key_callback);
+    // glfwMakeContextCurrent(window);
 
-    int temp = 0;
-    bool flag = true;
+    // ImGui_ImplGlfw_InitForOpenGL(window, true);
+    // ImGui_ImplOpenGL3_Init();
 
-    while (!glfwWindowShouldClose(window)){
-        glfwPollEvents();
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
+    // int temp = 0;
+    // bool flag = true;
 
-        //
+    // while (!glfwWindowShouldClose(window)){
+    //     glfwPollEvents();
+    //     ImGui_ImplOpenGL3_NewFrame();
+    //     ImGui_ImplGlfw_NewFrame();
+    //     ImGui::NewFrame();
 
-        ImDrawList* draw_list = ImGui::GetBackgroundDrawList();
+    //     //
 
-        auto data = manager.scan_data();
+    //     ImDrawList* draw_list = ImGui::GetBackgroundDrawList();
 
-        if(!data) continue;
+    //     auto data = manager.scan_data();
+
+    //     if(!data) continue;
         
-        for (const LidarNode& elem: data->get_nodes()){
-            draw_list->AddLine(
-                ImVec2(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2),
-                ImVec2(WINDOW_WIDTH / 2 + (int)elem.x, WINDOW_HEIGHT / 2 + (int)elem.y),
-                IM_COL32(0, 0, 255, 255),  
-                2.0f
-            );
-        }
+    //     for (const LidarNode& elem: data->get_nodes()){
+    //         draw_list->AddLine(
+    //             ImVec2(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2),
+    //             ImVec2(WINDOW_WIDTH / 2 + (int)elem.x, WINDOW_HEIGHT / 2 + (int)elem.y),
+    //             IM_COL32(0, 0, 255, 255),  
+    //             2.0f
+    //         );
+    //     }
 
         
-        ImGui::Render();
+    //     ImGui::Render();
 
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);  
-        glClear(GL_COLOR_BUFFER_BIT);  
+    //     glClearColor(0.1f, 0.1f, 0.1f, 1.0f);  
+    //     glClear(GL_COLOR_BUFFER_BIT);  
         
-        if (temp < 0) flag = true;
-        else if (temp > 100) flag = false;
-        if (flag) temp++;
-        else temp--;
+    //     if (temp < 0) flag = true;
+    //     else if (temp > 100) flag = false;
+    //     if (flag) temp++;
+    //     else temp--;
 
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-        glfwSwapBuffers(window);
+    //     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    //     glfwSwapBuffers(window);
 
-    }
+    // }
 
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
-    glfwDestroyWindow(window);
-    glfwTerminate();
+    // ImGui_ImplOpenGL3_Shutdown();
+    // ImGui_ImplGlfw_Shutdown();
+    // ImGui::DestroyContext();
+    // glfwDestroyWindow(window);
+    // glfwTerminate();
 }

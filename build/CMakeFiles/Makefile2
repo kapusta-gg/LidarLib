@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/wander/projects/lidar/build
 
 # The main recursive "all" target.
 all: CMakeFiles/imgui_lib.dir/all
+all: CMakeFiles/LidarLib.dir/all
 all: CMakeFiles/lidar_app.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/imgui_lib.dir/clean
+clean: CMakeFiles/LidarLib.dir/clean
 clean: CMakeFiles/lidar_app.dir/clean
 .PHONY : clean
 
@@ -83,7 +85,7 @@ clean: CMakeFiles/lidar_app.dir/clean
 CMakeFiles/imgui_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target imgui_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13 "Built target imgui_lib"
 .PHONY : CMakeFiles/imgui_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,18 +105,45 @@ CMakeFiles/imgui_lib.dir/clean:
 .PHONY : CMakeFiles/imgui_lib.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/LidarLib.dir
+
+# All Build rule for target.
+CMakeFiles/LidarLib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target LidarLib"
+.PHONY : CMakeFiles/LidarLib.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/LidarLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wander/projects/lidar/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LidarLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wander/projects/lidar/build/CMakeFiles 0
+.PHONY : CMakeFiles/LidarLib.dir/rule
+
+# Convenience name for target.
+LidarLib: CMakeFiles/LidarLib.dir/rule
+.PHONY : LidarLib
+
+# clean rule for target.
+CMakeFiles/LidarLib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/clean
+.PHONY : CMakeFiles/LidarLib.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/lidar_app.dir
 
 # All Build rule for target.
 CMakeFiles/lidar_app.dir/all: CMakeFiles/imgui_lib.dir/all
+CMakeFiles/lidar_app.dir/all: CMakeFiles/LidarLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=9,10,11,12,13 "Built target lidar_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=14,15,16 "Built target lidar_app"
 .PHONY : CMakeFiles/lidar_app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lidar_app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wander/projects/lidar/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wander/projects/lidar/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lidar_app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wander/projects/lidar/build/CMakeFiles 0
 .PHONY : CMakeFiles/lidar_app.dir/rule

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLidarLib.a CMakeFiles/LidarLib.dir/src/lidar_manager.cpp.o CMakeFiles/LidarLib.dir/src/lidar_structs.cpp.o CMakeFiles/LidarLib.dir/src/lidar_reader.cpp.o CMakeFiles/LidarLib.dir/src/lidar_writer.cpp.o
+/usr/bin/ranlib libLidarLib.a

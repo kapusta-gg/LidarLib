@@ -1,4 +1,5 @@
 /home/wander/projects/lidar/build/CMakeFiles/imgui_lib.dir
+/home/wander/projects/lidar/build/CMakeFiles/LidarLib.dir
 /home/wander/projects/lidar/build/CMakeFiles/lidar_app.dir
 /home/wander/projects/lidar/build/CMakeFiles/edit_cache.dir
 /home/wander/projects/lidar/build/CMakeFiles/rebuild_cache.dir

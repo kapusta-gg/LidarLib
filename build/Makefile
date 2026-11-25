@@ -130,6 +130,19 @@ imgui_lib/fast:
 .PHONY : imgui_lib/fast
 
 #=============================================================================
+# Target rules for targets named LidarLib
+
+# Build rule for target.
+LidarLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LidarLib
+.PHONY : LidarLib
+
+# fast build rule for target.
+LidarLib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/build
+.PHONY : LidarLib/fast
+
+#=============================================================================
 # Target rules for targets named lidar_app
 
 # Build rule for target.
@@ -310,36 +323,60 @@ imgui/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/imgui/imgui_widgets.cpp.s
 .PHONY : imgui/imgui_widgets.cpp.s
 
-src/lidar_data.o: src/lidar_data.cpp.o
-.PHONY : src/lidar_data.o
+src/lidar_manager.o: src/lidar_manager.cpp.o
+.PHONY : src/lidar_manager.o
 
 # target to build an object file
-src/lidar_data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o
-.PHONY : src/lidar_data.cpp.o
+src/lidar_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_manager.cpp.o
+.PHONY : src/lidar_manager.cpp.o
 
-src/lidar_data.i: src/lidar_data.cpp.i
-.PHONY : src/lidar_data.i
+src/lidar_manager.i: src/lidar_manager.cpp.i
+.PHONY : src/lidar_manager.i
 
 # target to preprocess a source file
-src/lidar_data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/src/lidar_data.cpp.i
-.PHONY : src/lidar_data.cpp.i
+src/lidar_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_manager.cpp.i
+.PHONY : src/lidar_manager.cpp.i
 
-src/lidar_data.s: src/lidar_data.cpp.s
-.PHONY : src/lidar_data.s
+src/lidar_manager.s: src/lidar_manager.cpp.s
+.PHONY : src/lidar_manager.s
 
 # target to generate assembly for a file
-src/lidar_data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/src/lidar_data.cpp.s
-.PHONY : src/lidar_data.cpp.s
+src/lidar_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_manager.cpp.s
+.PHONY : src/lidar_manager.cpp.s
+
+src/lidar_reader.o: src/lidar_reader.cpp.o
+.PHONY : src/lidar_reader.o
+
+# target to build an object file
+src/lidar_reader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_reader.cpp.o
+.PHONY : src/lidar_reader.cpp.o
+
+src/lidar_reader.i: src/lidar_reader.cpp.i
+.PHONY : src/lidar_reader.i
+
+# target to preprocess a source file
+src/lidar_reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_reader.cpp.i
+.PHONY : src/lidar_reader.cpp.i
+
+src/lidar_reader.s: src/lidar_reader.cpp.s
+.PHONY : src/lidar_reader.s
+
+# target to generate assembly for a file
+src/lidar_reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_reader.cpp.s
+.PHONY : src/lidar_reader.cpp.s
 
 src/lidar_structs.o: src/lidar_structs.cpp.o
 .PHONY : src/lidar_structs.o
 
 # target to build an object file
 src/lidar_structs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_structs.cpp.o
 .PHONY : src/lidar_structs.cpp.o
 
 src/lidar_structs.i: src/lidar_structs.cpp.i
@@ -347,7 +384,7 @@ src/lidar_structs.i: src/lidar_structs.cpp.i
 
 # target to preprocess a source file
 src/lidar_structs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_structs.cpp.i
 .PHONY : src/lidar_structs.cpp.i
 
 src/lidar_structs.s: src/lidar_structs.cpp.s
@@ -355,8 +392,32 @@ src/lidar_structs.s: src/lidar_structs.cpp.s
 
 # target to generate assembly for a file
 src/lidar_structs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_app.dir/build.make CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_structs.cpp.s
 .PHONY : src/lidar_structs.cpp.s
+
+src/lidar_writer.o: src/lidar_writer.cpp.o
+.PHONY : src/lidar_writer.o
+
+# target to build an object file
+src/lidar_writer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_writer.cpp.o
+.PHONY : src/lidar_writer.cpp.o
+
+src/lidar_writer.i: src/lidar_writer.cpp.i
+.PHONY : src/lidar_writer.i
+
+# target to preprocess a source file
+src/lidar_writer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_writer.cpp.i
+.PHONY : src/lidar_writer.cpp.i
+
+src/lidar_writer.s: src/lidar_writer.cpp.s
+.PHONY : src/lidar_writer.s
+
+# target to generate assembly for a file
+src/lidar_writer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LidarLib.dir/build.make CMakeFiles/LidarLib.dir/src/lidar_writer.cpp.s
+.PHONY : src/lidar_writer.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -414,6 +475,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... LidarLib"
 	@echo "... imgui_lib"
 	@echo "... lidar_app"
 	@echo "... imgui/backends/imgui_impl_glfw.o"
@@ -437,12 +499,18 @@ help:
 	@echo "... imgui/imgui_widgets.o"
 	@echo "... imgui/imgui_widgets.i"
 	@echo "... imgui/imgui_widgets.s"
-	@echo "... src/lidar_data.o"
-	@echo "... src/lidar_data.i"
-	@echo "... src/lidar_data.s"
+	@echo "... src/lidar_manager.o"
+	@echo "... src/lidar_manager.i"
+	@echo "... src/lidar_manager.s"
+	@echo "... src/lidar_reader.o"
+	@echo "... src/lidar_reader.i"
+	@echo "... src/lidar_reader.s"
 	@echo "... src/lidar_structs.o"
 	@echo "... src/lidar_structs.i"
 	@echo "... src/lidar_structs.s"
+	@echo "... src/lidar_writer.o"
+	@echo "... src/lidar_writer.i"
+	@echo "... src/lidar_writer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

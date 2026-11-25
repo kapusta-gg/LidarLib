@@ -83,24 +83,10 @@ CMakeFiles/lidar_app.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lidar_app.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wander/projects/lidar/src/main.cpp -o CMakeFiles/lidar_app.dir/src/main.cpp.s
 
-CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o: CMakeFiles/lidar_app.dir/flags.make
-CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o: /home/wander/projects/lidar/src/lidar_data.cpp
-CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o: CMakeFiles/lidar_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o -MF CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o.d -o CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o -c /home/wander/projects/lidar/src/lidar_data.cpp
-
-CMakeFiles/lidar_app.dir/src/lidar_data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lidar_app.dir/src/lidar_data.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wander/projects/lidar/src/lidar_data.cpp > CMakeFiles/lidar_app.dir/src/lidar_data.cpp.i
-
-CMakeFiles/lidar_app.dir/src/lidar_data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lidar_app.dir/src/lidar_data.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wander/projects/lidar/src/lidar_data.cpp -o CMakeFiles/lidar_app.dir/src/lidar_data.cpp.s
-
 CMakeFiles/lidar_app.dir/src/window.cpp.o: CMakeFiles/lidar_app.dir/flags.make
 CMakeFiles/lidar_app.dir/src/window.cpp.o: /home/wander/projects/lidar/src/window.cpp
 CMakeFiles/lidar_app.dir/src/window.cpp.o: CMakeFiles/lidar_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lidar_app.dir/src/window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lidar_app.dir/src/window.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lidar_app.dir/src/window.cpp.o -MF CMakeFiles/lidar_app.dir/src/window.cpp.o.d -o CMakeFiles/lidar_app.dir/src/window.cpp.o -c /home/wander/projects/lidar/src/window.cpp
 
 CMakeFiles/lidar_app.dir/src/window.cpp.i: cmake_force
@@ -111,43 +97,26 @@ CMakeFiles/lidar_app.dir/src/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lidar_app.dir/src/window.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wander/projects/lidar/src/window.cpp -o CMakeFiles/lidar_app.dir/src/window.cpp.s
 
-CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o: CMakeFiles/lidar_app.dir/flags.make
-CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o: /home/wander/projects/lidar/src/lidar_structs.cpp
-CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o: CMakeFiles/lidar_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o -MF CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o.d -o CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o -c /home/wander/projects/lidar/src/lidar_structs.cpp
-
-CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wander/projects/lidar/src/lidar_structs.cpp > CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.i
-
-CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wander/projects/lidar/src/lidar_structs.cpp -o CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.s
-
 # Object files for target lidar_app
 lidar_app_OBJECTS = \
 "CMakeFiles/lidar_app.dir/src/main.cpp.o" \
-"CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o" \
-"CMakeFiles/lidar_app.dir/src/window.cpp.o" \
-"CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o"
+"CMakeFiles/lidar_app.dir/src/window.cpp.o"
 
 # External object files for target lidar_app
 lidar_app_EXTERNAL_OBJECTS =
 
 lidar_app: CMakeFiles/lidar_app.dir/src/main.cpp.o
-lidar_app: CMakeFiles/lidar_app.dir/src/lidar_data.cpp.o
 lidar_app: CMakeFiles/lidar_app.dir/src/window.cpp.o
-lidar_app: CMakeFiles/lidar_app.dir/src/lidar_structs.cpp.o
 lidar_app: CMakeFiles/lidar_app.dir/build.make
-lidar_app: /home/wander/projects/lidar/rplidar_sdk/output/Linux/Release/libsl_lidar_sdk.a
+lidar_app: libLidarLib.a
 lidar_app: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 lidar_app: /usr/lib/x86_64-linux-gnu/libGLX.so
 lidar_app: /usr/lib/x86_64-linux-gnu/libGLU.so
 lidar_app: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 lidar_app: libimgui_lib.a
+lidar_app: /home/wander/projects/lidar/rplidar_sdk/output/Linux/Release/libsl_lidar_sdk.a
 lidar_app: CMakeFiles/lidar_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable lidar_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wander/projects/lidar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lidar_app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lidar_app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
