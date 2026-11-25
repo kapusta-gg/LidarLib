@@ -6,7 +6,7 @@
 
 class LidarReader{
     private:
-        std::string filename = "lidar_data.cpp";
+        std::string filename = "lidar_data.csv";
         char sep = ';';
         std::ifstream file;
 
@@ -17,10 +17,10 @@ class LidarReader{
         LidarReader(const std::string& filename);
         LidarReader(char sep);
         LidarReader(const std::string& filename, char sep);
-        std::vector<std::string> LidarReader::get_line();
-        std::vector<std::vector<std::string>> LidarReader::get_lines();
-        std::optional<LidarData>  LidarReader::read_scan();
-        std::vector<LidarData> LidarReader::read_scans()
+        std::vector<std::string> get_line();
+        std::vector<std::vector<std::string>> get_lines();
+        std::optional<LidarData>  read_scan();
+        std::vector<LidarData> read_scans();
 };
 
 #endif

@@ -43,6 +43,9 @@ bool LidarWriter::write_csv()
 
 bool LidarWriter::write_csv_header(){
     std::ofstream file(this->filename);
+    if (!file.is_open()) {
+        return false;
+    }
     file 
         << "timestamp" << sep
         << "x" << sep
