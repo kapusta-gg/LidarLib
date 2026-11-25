@@ -7,9 +7,9 @@
 #include "lidar_writer.h"
 
 
-LidarWriter::LidarWriter(LidarManager& manager) : manager(manager) {this->filename = "lidar_data.cpp"; this->sep = ';';}
-LidarWriter::LidarWriter(LidarManager& manager, char sep) : manager(manager), sep(sep) {this->filename = "lidar_data.csv";}
-LidarWriter::LidarWriter(LidarManager& manager, const std::string filename) : manager(manager), filename(filename) {this->sep = ';';}
+LidarWriter::LidarWriter(LidarManager& manager) : manager(manager) {}
+LidarWriter::LidarWriter(LidarManager& manager, char sep) : manager(manager), sep(sep) {}
+LidarWriter::LidarWriter(LidarManager& manager, const std::string filename) : manager(manager), filename(filename) {}
 LidarWriter::LidarWriter(LidarManager& manager, const std::string filename, char sep) : manager(manager), filename(filename), sep(sep) {}
 
 

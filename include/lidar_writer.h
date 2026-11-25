@@ -6,8 +6,8 @@
 class LidarWriter{
     private:
         LidarManager& manager;
-        std::string filename;
-        char sep;
+        std::string filename = "lidar_data.cpp";
+        char sep = ';';
 
     public:
         LidarWriter(LidarManager& manager);

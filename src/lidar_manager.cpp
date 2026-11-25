@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string>
-#include <math.h>
 #include <chrono>
 #include <thread>
 #include <optional>
